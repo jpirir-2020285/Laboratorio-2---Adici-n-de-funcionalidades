@@ -1,0 +1,975 @@
+{
+	"info": {
+		"_postman_id": "5a52d0e4-4812-44ec-af46-cb2545757d3e",
+		"name": "Veterinario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37952140"
+	},
+	"item": [
+		{
+			"name": "animal",
+			"item": [
+				{
+					"name": "Add Animal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mila2",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Gato Mediano cafe",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Domestico",
+									"type": "text"
+								},
+								{
+									"key": "species",
+									"value": "gato",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "age",
+									"value": "1 año",
+									"type": "text"
+								},
+								{
+									"key": "keeper",
+									"value": "67a59f1baf21855da1a59dfd",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3626/v1/animal",
+							"host": [
+								"localhost"
+							],
+							"port": "3626",
+							"path": [
+								"v1",
+								"animal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Animal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "MilaNuevo",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Gato Mediano cafe",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Domestico",
+									"type": "text"
+								},
+								{
+									"key": "species",
+									"value": "gato",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "age",
+									"value": "1 año",
+									"type": "text"
+								},
+								{
+									"key": "keeper",
+									"value": "67a59f1baf21855da1a59dfd",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3626/v1/animal/update/67a84bd1cb8cbe1e78121f3b",
+							"host": [
+								"localhost"
+							],
+							"port": "3626",
+							"path": [
+								"v1",
+								"animal",
+								"update",
+								"67a84bd1cb8cbe1e78121f3b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Animal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "MilaNuevo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Gato Mediano cafe",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "Domestico",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "species",
+									"value": "gato",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "age",
+									"value": "1 año",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "keeper",
+									"value": "67a59f1baf21855da1a59dfd",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "true",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3626/v1/animal/delete/67a85579c9d3f44b269842df",
+							"host": [
+								"localhost"
+							],
+							"port": "3626",
+							"path": [
+								"v1",
+								"animal",
+								"delete",
+								"67a85579c9d3f44b269842df"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E1OWYxYmFmMjE4NTVkYTFhNTlkZmQiLCJuYW1lIjoiTWlndWVsIiwidXNlcm5hbWUiOiJtaWd1ZWxpdG8xMjMiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MzkwNjczNjMsImV4cCI6MTczOTA3ODE2M30.ljSkt4KWOKqmzASPmBL_VgPDZ5wf5rg19DO0iGLYaVU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Aut",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3626/v1/animal/",
+							"host": [
+								"localhost"
+							],
+							"port": "3626",
+							"path": [
+								"v1",
+								"animal",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list one",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E1OWYxYmFmMjE4NTVkYTFhNTlkZmQiLCJuYW1lIjoiTWlndWVsIiwidXNlcm5hbWUiOiJtaWd1ZWxpdG8xMjMiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MzkwNjczNjMsImV4cCI6MTczOTA3ODE2M30.ljSkt4KWOKqmzASPmBL_VgPDZ5wf5rg19DO0iGLYaVU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Aut",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3626/v1/animal/",
+							"host": [
+								"localhost"
+							],
+							"port": "3626",
+							"path": [
+								"v1",
+								"animal",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "LoginUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "miguelito123",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Hola1234.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3626/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3626",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Juanito",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Revolorio",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Revolorio123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jklee@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Hola1234.",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "CLIENT",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/josem/OneDrive/Documentos/proyecto html/Agenda/detalleContacto/usuarios/lili.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3626/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3626",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E1OWYxYmFmMjE4NTVkYTFhNTlkZmQiLCJuYW1lIjoiTWlndWVsIiwidXNlcm5hbWUiOiJtaWd1ZWxpdG8xMjMiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MzkwNjczNjMsImV4cCI6MTczOTA3ODE2M30.ljSkt4KWOKqmzASPmBL_VgPDZ5wf5rg19DO0iGLYaVU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Aut",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3626/v1/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "3626",
+							"path": [
+								"v1",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list one",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E1OWYxYmFmMjE4NTVkYTFhNTlkZmQiLCJuYW1lIjoiTWlndWVsIiwidXNlcm5hbWUiOiJtaWd1ZWxpdG8xMjMiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MzkwNjczNjMsImV4cCI6MTczOTA3ODE2M30.ljSkt4KWOKqmzASPmBL_VgPDZ5wf5rg19DO0iGLYaVU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3626/v1/user/67a59f1baf21855da1a59dfd",
+							"host": [
+								"localhost"
+							],
+							"port": "3626",
+							"path": [
+								"v1",
+								"user",
+								"67a59f1baf21855da1a59dfd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Miguel",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Pirir",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Miguelito123",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "Miguelito123@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Hola1234.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "12312332",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profilePicture",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3626/v1/user/update/67a59f1baf21855da1a59dfd",
+							"host": [
+								"localhost"
+							],
+							"port": "3626",
+							"path": [
+								"v1",
+								"user",
+								"update",
+								"67a59f1baf21855da1a59dfd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Miguel",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Pirir",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Miguelito123",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "Miguelito123@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Hola1234.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "12312332",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profilePicture",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3626/v1/user/update/67a59f1baf21855da1a59dfd",
+							"host": [
+								"localhost"
+							],
+							"port": "3626",
+							"path": [
+								"v1",
+								"user",
+								"update",
+								"67a59f1baf21855da1a59dfd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Miguel",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "surname",
+									"value": "Pirir",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "Miguelito123",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "Miguelito123@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "Hola1234.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "12312332",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "role",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profilePicture",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3626/v1/user/delete/67a8134245dbaf285ace77ca",
+							"host": [
+								"localhost"
+							],
+							"port": "3626",
+							"path": [
+								"v1",
+								"user",
+								"delete",
+								"67a8134245dbaf285ace77ca"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointement",
+			"item": [
+				{
+					"name": "Add Appointment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Cita1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Esta cita es para primer cliente",
+									"type": "text"
+								},
+								{
+									"key": "client",
+									"value": "67a58c7f44b1972dc64cf376",
+									"type": "text"
+								},
+								{
+									"key": "animal",
+									"value": "67a84bd1cb8cbe1e78121f3b",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3626/v1/appointment/",
+							"host": [
+								"localhost"
+							],
+							"port": "3626",
+							"path": [
+								"v1",
+								"appointment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Appointment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Cita Actualizada",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Esta cita esta actualizada",
+									"type": "text"
+								},
+								{
+									"key": "client",
+									"value": "67a58c7f44b1972dc64cf376",
+									"type": "text"
+								},
+								{
+									"key": "animal",
+									"value": "67a84bd1cb8cbe1e78121f3b",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3626/v1/appointment/update/67a928ebddc3d21145afee4c",
+							"host": [
+								"localhost"
+							],
+							"port": "3626",
+							"path": [
+								"v1",
+								"appointment",
+								"update",
+								"67a928ebddc3d21145afee4c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Cita1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Esta cita es para primer cliente",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "client",
+									"value": "67a58c7f44b1972dc64cf376",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "animal",
+									"value": "67a84bd1cb8cbe1e78121f3b",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "true",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3626/v1/appointment/",
+							"host": [
+								"localhost"
+							],
+							"port": "3626",
+							"path": [
+								"v1",
+								"appointment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List one",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Cita1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Esta cita es para primer cliente",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "client",
+									"value": "67a58c7f44b1972dc64cf376",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "animal",
+									"value": "67a84bd1cb8cbe1e78121f3b",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "true",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3626/v1/appointment/",
+							"host": [
+								"localhost"
+							],
+							"port": "3626",
+							"path": [
+								"v1",
+								"appointment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Cita1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Esta cita es para primer cliente",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "client",
+									"value": "67a58c7f44b1972dc64cf376",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "animal",
+									"value": "67a84bd1cb8cbe1e78121f3b",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "true",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3626/v1/appointment/",
+							"host": [
+								"localhost"
+							],
+							"port": "3626",
+							"path": [
+								"v1",
+								"appointment",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
